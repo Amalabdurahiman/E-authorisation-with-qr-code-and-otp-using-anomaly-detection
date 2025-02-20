@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify QR</title>
+</head>
+<body>
+    <h2>Scan the QR Code</h2>
+    <img src="data:image/png;base64,{{ img_data }}" alt="QR Code">
+    <form action="/verify_qr" method="post">
+        Enter OTP from QR Code: <input type="text" name="otp"><br>
+        <input type="submit" value="Verify OTP">
+    </form>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Scan QR Code</title>
+</head>
+<body>
+    <h2>Scan this QR code to register OTP</h2>
+    <img src="data:image/png;base64,{{ img_data }}">
+    <br>
+    <a href="/login">Proceed to Login</a>
+</body>
+</html>
